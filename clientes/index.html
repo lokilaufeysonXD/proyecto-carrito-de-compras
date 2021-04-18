@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Formulario clientes</title>
+</head>
+
+<body>
+  <form>
+      <div class="container"></div>
+        <h1>Registro de Clientes</h1>
+        <p></p>
+      <form>
+
+        <div class="form-text">
+            <label for="txtRFC">RFC:</label>    
+            <input type="text   " class="form-control" id="txtRFC" placeholder="Escribe el RFC">
+        </div>
+          
+        <div class="form-text">
+            <label for="txtNameRS">Razon Social:</label>    
+            <input type="text" class="form-control" id="txtRS" placeholder="Escribe la Razon Social">
+        </div>
+          
+        <div class="form-text">
+          <label for="txtPrecio">Email:</label>    
+          <input type="text" class="form-control" id="txtEmail" placeholder="Correo Electronico">
+        </div>
+          
+        <div class="form-text">
+            <label for="txtDirF">Direccion Fiscal:</label>    
+            <input type="text" class="form-control" id="txtDF" placeholder="Direccion">
+        </div>
+     
+          
+        <button type="button" class="btn btn-default" id="btnSaveDate">Guardar</button>
+        <button type="button" class="btn btn-default" id="btnDeleteDate">Borrar tabla</button>
+      </form>
+  </div>
+        <div class="container">
+          <h2>Clientes</h2>
+          <table class="table table -hover" id="prodTable">
+             <thead>
+                <tr>
+                  <th>RFC</th>  
+                  <th>Razon Social</th>
+                  <th>Email</th>
+                  <th>Direccion F.</th>
+                </tr>
+             </thead>
+
+             <!-- tbody es el cuerpo de la tabla, solo para ese espacio se utiliza-->
+             <tbody>
+                 
+             </tbody>
+         </table>
+        </div>   
+    
+<p></p>
+
+        
+        <script src="Codigo/clientesFunciones.js"></script>
+        <script src="Codigo/clientesObjetos.js"> </script>  
+
+</body>
+</html>
