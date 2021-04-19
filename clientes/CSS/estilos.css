@@ -59,28 +59,28 @@ nav ul li a:hover, .menu-activo{
 #descripcion_encuesta2{
 	color: white;
 	font-size: 187%;
-	padding-right: 87px;
+	padding-right: 152px;
 }
 #descripcion_encuesta3{
 	color: white;
 	font-size: 187%;
-	padding-right: 268px;
+	padding-right: 242px;
 }
 #descripcion_encuesta4{
 	color: white;
 	font-size: 187%;
-	padding-right: 219px;
+	padding-right: 116px;
 }
 /*---------------------------------------------------------------------------------*/
 
 #formulario{
 	padding-top: 2%;
-	padding-left: 35%; 
+	padding-left: 38%; 
 }
 
 #caja-boton{
 	padding-top: 2%;
-	padding-left: 13%; 
+	padding-left: 2%; 
 }
 
 #btnSaveDate{
@@ -96,22 +96,35 @@ nav ul li a:hover, .menu-activo{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     cursor: pointer;
 }
+#btnDeleteDate{
+	background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 75px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
 
 /*---------------------------------------------------------------------------------*/
-#txtCod{
+#txtRFC{
 	border-radius: 5px;
 	border: none;
 }
-#txtNP{
+#txtRS{
 	border-radius: 5px;
 	border: none;
 }
 
-#txtPrice{
+#txtEmail{
 	border-radius: 5px;
 	border: none;
 }
-#txtEXS{
+#txtDF{
 	border-radius: 5px;
 	border: none;
 }
@@ -119,7 +132,7 @@ nav ul li a:hover, .menu-activo{
 
 
 #prodTable{
-	padding-left: 28%;
+	padding-left: 37%;
 	font-size: 156%;
 }
 

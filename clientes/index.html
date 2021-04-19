@@ -5,50 +5,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Formulario clientes</title>
 </head>
 
 <body>
-  <form>
-      <div class="container"></div>
+    <div id="header-top"> 
+      <center>
+          <img id="logo" src="img/logo carrito.PNG" alt="cargando..." >
+      </center>
+    </div> 
+  
+    <div class="container" id="header-2">
+      <center>
         <h1>Registro de Clientes</h1>
-        <p></p>
-      <form>
+      </center>
+    </div>
+<div id="cuerpo">
+  <form id="formulario">
 
         <div class="form-text">
-            <label for="txtRFC">RFC:</label>    
+            <label for="txtRFC" id="descripcion_encuesta1">RFC:</label>    
             <input type="text   " class="form-control" id="txtRFC" placeholder="Escribe el RFC">
         </div>
           
         <div class="form-text">
-            <label for="txtNameRS">Razon Social:</label>    
+            <label for="txtNameRS" id="descripcion_encuesta2">Razon Social:</label>    
             <input type="text" class="form-control" id="txtRS" placeholder="Escribe la Razon Social">
         </div>
           
         <div class="form-text">
-          <label for="txtPrecio">Email:</label>    
+          <label for="txtPrecio" id="descripcion_encuesta3">Email:</label>    
           <input type="text" class="form-control" id="txtEmail" placeholder="Correo Electronico">
         </div>
           
         <div class="form-text">
-            <label for="txtDirF">Direccion Fiscal:</label>    
+            <label for="txtDirF" id="descripcion_encuesta4">Direccion Fiscal:</label>    
             <input type="text" class="form-control" id="txtDF" placeholder="Direccion">
         </div>
      
-          
-        <button type="button" class="btn btn-default" id="btnSaveDate">Guardar</button>
-        <button type="button" class="btn btn-default" id="btnDeleteDate">Borrar tabla</button>
-      </form>
+        <div id="caja-boton"> 
+          <button type="button" class="btn btn-default" id="btnSaveDate" >Guardar</button>
+          <button type="button" class="btn btn-default" id="btnDeleteDate">Borrar tabla</button>
+        </div>
+  </form>
+</div>
+
   </div>
-        <div class="container">
-          <h2>Clientes</h2>
+        <div class="container" id="cuerpo2">
+          <center>
+            <h1>Clientes</h1>
+          </center>
+
           <table class="table table -hover" id="prodTable">
              <thead>
                 <tr>
-                  <th>RFC</th>  
-                  <th>Razon Social</th>
-                  <th>Email</th>
-                  <th>Direccion F.</th>
+                  <th>RFC &nbsp; &nbsp;</th>  
+                  <th>Razon Social &nbsp; &nbsp;</th>
+                  <th>Email &nbsp; &nbsp;</th>
+                  <th>Direccion F. &nbsp; &nbsp;</th>
                 </tr>
              </thead>
 
