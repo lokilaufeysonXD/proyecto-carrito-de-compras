@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Formulario</title>
-    </head>
+</head>
 
-    <body>
-<form>
-<div class="container"></div>
-    <h1>Registro de Productos</h1>
-    <p></p>
-    <form>
+<body>
+    <div id="header-top"> 
+        <center>
+            <img id="logo" src="img/logo carrito.PNG" alt="cargando..." >
+        </center>
+    </div> 
+    <div id="header-2">
+        <CENTER>
+            <h1>Registro de Productos</h1>
+        </CENTER>
+    </div>
+
+<div id="cuerpo">
+    <form id="formulario">
         <div class="form-text">
-            <label for="txtcodigo">Codigo:</label>    
-            <input type="text   " class="form-control" id="txtCod" placeholder="Escribe el codigo">
+            <label for="txtcodigo" id="descripcion_encuesta1">Codigo:</label>    
+            <input type="text   " class="form-control" id="txtCod" placeholder="Escribe el codigo" >
         </div>
         
         <div class="form-text">
-            <label for="txtNameP">Nombre del producto:</label>    
+            <label for="txtNameP" id="descripcion_encuesta2">Nombre del producto:</label>    
             <input type="text" class="form-control" id="txtNP" placeholder="Escribe el producto">
         </div>
         
         <div class="form-text">
-            <label for="txtPrecio">Precio:</label>    
+            <label for="txtPrecio" id="descripcion_encuesta3">Precio:</label>    
             <input type="text" class="form-control" id="txtPrice" placeholder="Precio">
         </div>
         
         <div class="form-text">
-            <label for="txtExist">Existencia:</label>    
+            <label for="txtExist" id="descripcion_encuesta4">Existencia:</label>    
             <input type="text" class="form-control" id="txtEXS" placeholder="Existencia">
         </div>
    
-        
-        <button type="button" class="btn btn-default" id="btnSaveDate">Guardar</button>
+        <div id="caja-boton">
+            <button type="button" class="btn btn-default" id="btnSaveDate">Guardar</button>
+        </div>
     </form>
 </div>
-        <div class="container">
+
+<div class="container" id="cuerpo2">
          <h2>Productos</h2>
          <table class="table table-hover" id="prodTable">
              <thead>
@@ -56,7 +67,8 @@
                
              </tbody>
          </table>
-        </div>  
+</div>  
+
 <p></p>
 
         
