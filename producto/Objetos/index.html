@@ -4,14 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/estilos.css">
+    
     <title>Formulario</title>
 </head>
 
 <body>
     <div id="header-top"> 
         <center>
-            <img id="logo" src="img/logo carrito.PNG" alt="cargando..." >
+            <img id="logo" src="" alt="cargando..." >
+            <div class="two columns u-pull-right">
+                <ul>
+                    <li class="submenu">
+                            <img src="img/cart.png" id="img-carrito">
+                            <div id="carrito">
+                                    
+                                    <table id="lista-carrito" class="u-full-width">
+                                        <thead>
+                                            <tr>
+                                                <th>Codigo</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th>Eliminar producto</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="carritoprod"></tbody>
+                                        <tbody id="carritototales"></tbody>
+                                    </table>
+        
+                                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                            </div>
+                    </li>
+                </ul>
+            </div>
         </center>
     </div> 
     <div id="header-2">
@@ -19,7 +44,7 @@
             <h1>Registro de Productos</h1>
         </CENTER>
     </div>
-
+    
 <div id="cuerpo">
     <form id="formulario">
         <div class="form-text">
@@ -37,10 +62,7 @@
             <input type="text" class="form-control" id="txtPrice" placeholder="Precio">
         </div>
         
-        <div class="form-text">
-            <label for="txtExist" id="descripcion_encuesta4">Existencia:</label>    
-            <input type="text" class="form-control" id="txtEXS" placeholder="Existencia">
-        </div>
+        
    
         <div id="caja-boton">
             <button type="button" class="btn btn-default" id="btnSaveDate">Guardar</button>
@@ -58,9 +80,8 @@
                     <th>Codigo &nbsp; &nbsp;</th>  
                     <th>Nombre del producto &nbsp; &nbsp;</th>
                     <th>Precio &nbsp; &nbsp;</th>
-                    <th>Existencia &nbsp; &nbsp;</th>
-                    <th>Seleccionar &nbsp; &nbsp;</th>
-                    <th>Eliminar &nbsp; &nbsp;</th>
+                    
+                    <th>Anadir &nbsp; &nbsp;</th>
                 </tr>
             </thead>
 
