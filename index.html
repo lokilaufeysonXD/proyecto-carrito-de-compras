@@ -3,72 +3,63 @@
 <head>
 	<meta charset="UTF-8">
 	<title>carrito de compra</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.cs">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swa" rel="styleshee">
-	<link rel="stylesheet" href="css/estilos.cs">
-	<!-- SOLO QUITE UNA LETA DE LA DIRECCION DE LOS ESTILOS -->
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div id="header-top"> 
-	<center>
-		<img id="logo" src="img/logo carrio.PNG" alt="cargando..." >
-	</center>
-</div> 
 
+	<img id="logo" src="img/logo carrito.PNG" alt="cargando..." >
 
-
-<div id="header-2" >
+<header class="header-2" >
 	<center>
 		<div id="boton_producto_registro">
-			<button onclick="location.href='producto/Objetos/index.html'" id="boton_producto_registro_estilo">registro de productos</button>
-
-			
+			<button onclick="location.href='producto/Objetos/index.html'"
+			 id="boton_producto_registro_estilo">registro de productos</button>
 		</div>
 	</center>
-</div>
+</header>
 
-<div id="header-top"> 
+
+<div class="registro_de_clientes">
+
 	<center>
-		<img id="logo" src="img/logo carrito.PNG" alt="cargando..." >
-	</center>
-  </div> 
+		<h1>Registro de Clientes</h1>
+	</center>	
 
-  <div class="container" id="header-2">
-	<center>
-	  <h1>Registro de Clientes</h1>
-	</center>
-  </div>
-<div id="cuerpo">
-<form id="formulario">
+	<form class="formulario">
 
-	  <div class="form-text">
-		  <label for="txtRFC" id="descripcion_encuesta1">RFC:</label>    
-		  <input type="text   " class="form-control" id="txtRFC" placeholder="Escribe el RFC">
-	  </div>
-		
-	  <div class="form-text">
-		  <label for="txtNameRS" id="descripcion_encuesta2">Razon Social:</label>    
-		  <input type="text" class="form-control" id="txtRS" placeholder="Escribe la Razon Social">
-	  </div>
-		
-	  <div class="form-text">
-		<label for="txtPrecio" id="descripcion_encuesta3">Email:</label>    
-		<input type="text" class="form-control" id="txtEmail" placeholder="Correo Electronico">
-	  </div>
-		
-	  <div class="form-text">
-		  <label for="txtDirF" id="descripcion_encuesta4">Direccion Fiscal:</label>    
-		  <input type="text" class="form-control" id="txtDF" placeholder="Direccion">
-	  </div>
-   
-	  <div id="caja-boton"> 
-		<button type="button" class="btn btn-default" id="btnSaveDate" >Guardar</button>
-			<!-- <button type="button" class="btn btn-default" id="btnDeleteDate">Borrar tabla</button> -->
-
-		
-	  </div>
-</form>
+		  <div class="form-text">
+			  <label for="txtRFC" id="p1" ></label>    
+			  <input type="text   " class="form-control" id="txtRFC" placeholder="Escribe el RFC">
+		  </div>
+			
+		  <div class="form-text">
+			  <label for="txtNameRS" ></label>    
+			  <input type="text" class="form-control" id="txtRS" placeholder="Escribe la Razon Social">
+		  </div>
+			
+		  <div class="form-text">
+			<label for="txtPrecio" ></label>    
+			<input type="text" class="form-control" id="txtEmail" placeholder="Correo Electronico">
+		  </div>
+			
+		  <div class="form-text">
+			  <label for="txtDirF" ></label>    
+			  <input type="text" class="form-control" id="txtDF" placeholder="Direccion">
+		  </div>
+	   
+		 <nav> 
+			<button type="button" class="btn btn-default">Guardar</button>
+		</nav>
+	</form>
 </div>
 
   
@@ -83,7 +74,6 @@
 
 
 	<div id="cuerpo">
-		<div>
 			<img id="imagen_cuerpo_de_pagina" src="img/INTEL.jpg" alt="cargando..." >
 
 			<p id="parrafo_descripcion_cuerpo">
@@ -106,13 +96,12 @@
 
 					hasta 2,5 veces superior con Intel® Deep Learning Boost (Intel® DL Boost).2
 			</p>
-		</div>
+	
 	</div>
 
 	<div id="cuerpo2">
-		<img id="imagen_cuerpo2_de_pagina" src="img/AMD ryzen.png" alt="cargando..." >
-
-		<p id="parrafo_descripcion_cuerpo2">
+		<div>			
+			<p id="parrafo_descripcion_cuerpo2">
 			Disfruta una experiencia informática sin igual en tu PC, gracias a procesadores para <br>computadoras de escritorio eficientes y de alto rendimiento que incorporan la tecnología de <br> núcleos de procesador de 7 nm más avanzada del mundo.
 			<br>
 			<br>
@@ -123,6 +112,8 @@
 			<br>
 			Para los usuarios que buscan una respuesta rápida, entretenimiento asombroso y tecnología de <br>procesadores avanzada para aprovechar futuras actualizaciones, como las de tarjetas gráficas, <br> la respuesta es Athlon™
 		</p>
+		<img id="imagen_cuerpo2_de_pagina" src="img/AMD ryzen.png" alt="cargando..." >
+	</div>
 	</div>
 
 	<div id="cuerpo3">
