@@ -1,4 +1,5 @@
-document.querySelector('#btnSaveDate'). addEventListener('click', saveDate);
+document.querySelector('#btnSaveDate').addEventListener('click', saveDate);
+document.querySelector('#btnDeleteTB').addEventListener('click', deletetable);
 printProductTable();
 
 
@@ -12,7 +13,9 @@ function saveDate(){
         printProductTable();
 
 }
-
+function deletetable(){
+    //localStorage.removeItem('localRegistrosList');
+}
 
 function printProductTable(){
     var list = getRegistrosList(),

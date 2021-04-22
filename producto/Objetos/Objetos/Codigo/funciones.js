@@ -2,12 +2,18 @@
 
 const contenedorCarrito = document.querySelector('#carritoprod');
 const contenedorCarritototales = document.querySelector('#carritototales');
+const contenedorCarritoclientes = document.querySelector('#carritoclientes');
 const carrito = document.querySelector('#carrito');
 const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
-
+const comprarCarritoBtn = document.querySelector('#comprar-carrito');
+const contenedorSelectClientes = document.querySelector('#SelectClientes');
+var optionSelected= document.querySelector('#SelectClientes');
 var registrosList = [];
 var carritoArray=[];
-let carritoCompras = [];
+var carritoCompras = [];
+var clienteArray=[];
+
+
 vaciarCarritoBtn.addEventListener('click', () => {
     carritoArray = [];
     mostrarCarrito(carritoArray);
@@ -34,7 +40,12 @@ function localStorageRegistrosList(plist){
 }
 function localStorageCarritoList(plist){
     localStorage.setItem('localRegistrosCarritoList', JSON.stringify(plist));
-    storedList = JSON.parse(localStorage.getItem('localRegistrosCarritoList'));
+    
+    console.log(storedList);
+}
+function localStorageclienteList(plist){
+    
+    
     console.log(storedList);
 }
 function getRegistrosList(){
@@ -94,12 +105,9 @@ function mostrarCarrito(carritoArray){
             <td>
                 ${element.codigo}
             </td>
-
-            
             <td>
                 ${element.nombreprod}
             </td>
-
             <td>
                 ${element.precio}
             </td>
@@ -118,7 +126,7 @@ function mostrarCarrito(carritoArray){
     });
     const row2 = document.createElement('tr');
         row2.innerHTML = `
-            <td>
+        
             <th>Subtotal: ${suma}</th>
             <th> IVA: ${sumiva}</th>
             <th>Total: ${total}</th>
@@ -126,6 +134,48 @@ function mostrarCarrito(carritoArray){
             
         `;
     contenedorCarritototales.appendChild(row2);
+
+
+
+    storedList = JSON.parse(localStorage.getItem('datosClientes'));
+    storedList.forEach(element => {
+        var i=0;
+        i++;
+        
+        const row3 = document.createElement('option');
+        row3.innerHTML = 
+        `
+        <option value="${i}">${element.RFC}</option> 
+       
+        `;       
+        contenedorSelectClientes.appendChild(row3);
+        
+    });
+    
+    
+    optionSelected.addEventListener('change', function(){
+        while(contenedorCarritoclientes.firstChild){    
+            contenedorCarritoclientes.removeChild(contenedorCarritoclientes.firstChild);
+        }
+    
+    var valorRFC = this.value;
+
+    storedList = JSON.parse(localStorage.getItem('datosClientes'));
+    clienteArray= storedList.filter(element => element.RFC === valorRFC);   
+    localStorage.setItem('ClientesSelec',JSON.stringify(clienteArray))
+    console.log(clienteArray[0]);
+
+    const row4 = document.createElement('tr')
+    row4.innerHTML = 
+    `<th>RFC: ${clienteArray[0].RFC}</th>
+    <th> Razon Social: ${clienteArray[0].RazonS}</th>
+    <th> Email: ${clienteArray[0].Email}</th>
+    <th>Direccion: ${clienteArray[0].Direccion}</th>`;
+    contenedorCarritoclientes.appendChild(row4);
+    
+    
+})
+    
     localStorageCarritoList(carritoArray);
     
 }
@@ -136,7 +186,14 @@ function limpiarHTML(){
     while(contenedorCarritototales.firstChild){    
         contenedorCarritototales.removeChild(contenedorCarritototales.firstChild);
     }
+    while(contenedorCarritoclientes.firstChild){    
+        contenedorCarritoclientes.removeChild(contenedorCarritoclientes.firstChild);
+    }
+    while(contenedorSelectClientes.firstChild){    
+        contenedorSelectClientes.removeChild(contenedorSelectClientes.firstChild);
+    }
 }
+
 function eliminarCurso(e){
     if(e.target.classList.contains('borrar-curso')){
         const cursoId = e.target.getAttribute('data-id');

@@ -1,5 +1,4 @@
-document.querySelector('#btnSaveDate'). addEventListener('click', saveValues);
-document.querySelector('#btnDeleteDate'). addEventListener('click', borrartabla);
+
 //imprimirTabla();
 
 

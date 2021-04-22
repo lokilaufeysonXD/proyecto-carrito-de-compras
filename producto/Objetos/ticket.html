@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Factura</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+</div><div id="app" class="col-11">
+
+    <h2>Ticket de compra</h2>
+
+    <div class="row my-3">
+      <div class="col-10">
+        <p>Proyecto de carrito de compras</p>
+        
+      </div>
+      <div class="col-2">
+        <img src="" />
+      </div>
+    </div>
+  
+    <hr />
+  
+    <div class="row fact-info mt-3">
+      <div class="col-3">
+        <h5>RFC</h5>
+        <p id="ejemplo"></p>
+      </div>
+      <div class="col-3">
+        <h5>Razon Social</h5>
+        <p id="idPrint"></p>
+      </div>
+      <div class="col-3">
+        <h5>Email</h5>
+        <h5></h5>
+      </div>
+      <div class="col-3">
+      <h5>Direccion Fiscal</h5>
+        <p id=""></p>
+      </div>
+    </div>
+    
+
+    <div class="row fact-info mt-3">
+      <div class="col-3">
+        <h5>${ListaClientes[0].RFC}</h5>
+        <p id="ejemplo"></p>
+      </div>
+      <div class="col-3">
+        <h5>${ListaClientes[0].RazonS}</h5>
+        <p id="idPrint"></p>
+      </div>
+      <div class="col-3">
+        <h5>${ListaClientes[0].Email}</h5>
+        <h5></h5>
+      </div>
+      <div class="col-3">
+      <h5>${ListaClientes[0].Direccion}</h5>
+        <p id=""></p>
+      </div>
+    </div>
+
+
+  
+    <div id="llenadoprod" class="row my-5">
+      <table class="table table-borderless factura">
+        <thead>
+          <tr>
+            <th>Codigo.</th>
+            <th>Nombre del Producto</th>
+            <th>Precio</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody >
+          
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <th></th>
+            <th></th>
+            <th>Total Factura</th>
+            <th>****</th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  
+    <div class="cond row">
+      <div class="col-12 mt-3">
+        <h4>Gracias por su compra XD!!!</h4>
+        
+      </div>
+    </div>
+</div>
+<!-- partial -->
+        <script src="Objetos/Codigo/funcionesPrint.js"> </script>
+        <script src="OBjetos/Codigo/funciones.js"></script>
+        <script src="Objetos/Codigo/objetos.js"> </script>  
+        <script>
+        
+        </script>
+</body>
+</html>

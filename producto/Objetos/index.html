@@ -30,9 +30,14 @@
                                         </thead>
                                         <tbody id="carritoprod"></tbody>
                                         <tbody id="carritototales"></tbody>
+                                        <tbody id="carritoclientes">
+                                            <select name="clientesDatos" id="SelectClientes"></select>
+                                        </tbody>
                                     </table>
         
                                     <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                                    <a href="#" id="imprimir" class="button u-full-width">Comprar Carrito</a>
+
                             </div>
                     </li>
                 </ul>
@@ -66,6 +71,7 @@
    
         <div id="caja-boton">
             <button type="button" class="btn btn-default" id="btnSaveDate">Guardar</button>
+            <button type="button" class="btn btn-default" id="btnDeleteTB">Eliminar tabla</button>
         </div>
     </form>
 </div>
@@ -94,9 +100,10 @@
 
 <p></p>
 
-        
+        <script src="Objetos/Codigo/funcionesPrint.js"> </script>
         <script src="OBjetos/Codigo/funciones.js"></script>
         <script src="Objetos/Codigo/objetos.js"> </script>  
+        
 
     </body>
     </html>

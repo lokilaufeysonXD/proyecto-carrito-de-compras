@@ -1,5 +1,9 @@
 $mylocalStorage = window.localStorage;
 var registros=[];
+document.querySelector('#btnSaveDate'). addEventListener('click', saveValues);
+document.querySelector('#btnDeleteDate'). addEventListener('click', borrartabla);
+
+
 
 function saveValues()
 {
@@ -9,7 +13,7 @@ function saveValues()
         Direccion = document.getElementById("txtDF").value;
 
         crearLocalstorage(RFC, RazonS, Email , Direccion);   
-        //imprimirTabla();   
+        
 };
 
 function borrartabla(){
@@ -46,13 +50,4 @@ function getRegistrosList(){
         registros =  JSON.parse(storedList); 
         }
     return registros;
-}
-function deleteElementrow(codedelete){
-    let lista= "";
-    console.log(codedelete);
-    lista = JSON.parse(localStorage.getItem('datosClientes'));
-    let indexLista= lista.findIndex(element => element.RFC === codedelete);
-    lista.splice(indexLista, 1);
-    let listaJSON= JSON.stringify(lista);
-    localStorage.setItem('datosClientes', listaJSON);
 }
